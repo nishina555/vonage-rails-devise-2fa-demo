@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: docker_rails6_web_mysql8_boilerplate_development
+  database: vonage_rails_devise_2fa_demo_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: docker_rails6_web_mysql8_boilerplate_test
+  database: vonage_rails_devise_2fa_demo_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: docker_rails6_web_mysql8_boilerplate_production
-  username: docker_rails6_web_mysql8_boilerplate
-  password: <%= ENV['DOCKER_RAILS6_WEB_MYSQL8_BOILERPLATE_DATABASE_PASSWORD'] %>
+  database: vonage_rails_devise_2fa_demo_production
+  username: vonage_rails_devise_2fa_demo
+  password: <%= ENV['VONAGE_RAILS_DEVISE_2FA_DEMO_DATABASE_PASSWORD'] %>

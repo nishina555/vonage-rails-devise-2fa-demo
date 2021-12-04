@@ -1,5 +1,5 @@
 {
-  "name": "docker_rails6_web_mysql8_boilerplate",
+  "name": "vonage_rails_devise_2fa_demo",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

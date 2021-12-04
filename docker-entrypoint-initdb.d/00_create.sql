@@ -1,1 +1,1 @@
-CREATE DATABASE docker_rails6_web_mysql8_boilerplate_test;
+CREATE DATABASE vonage_rails_devise_2fa_demo_test;
