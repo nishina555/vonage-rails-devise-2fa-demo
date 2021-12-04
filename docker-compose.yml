@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/docker-rails6-web-mysql8-boilerplate
+      - gem_data:/usr/local/bundle
+    depends_on:
+      - db
+    command: ["./wait-for-it.sh", "db:3306", "--", "./start.sh"]
+  db:
+    image: mysql:8.0.21
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: 'webuser'
+      MYSQL_PASSWORD: 'webpass'
+      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_DATABASE: 'docker_rails6_web_mysql8_boilerplate_development'
+volumes:
+  mysql_data:
+  gem_data:
