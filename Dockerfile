@@ -4,6 +4,6 @@ RUN apt-get update -qq && \
     apt-get install -y nodejs \
                        npm && \
     npm install -g yarn
-WORKDIR /vonage-rails-devise-2fa-demo
-COPY Gemfile* /vonage-rails-devise-2fa-demo/
+WORKDIR /app
+COPY Gemfile* /app/
 RUN bundle install

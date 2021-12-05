@@ -7,7 +7,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - .:/vonage-rails-devise-2fa-demo
+      - .:/app
       - gem_data:/usr/local/bundle
     depends_on:
       - db
