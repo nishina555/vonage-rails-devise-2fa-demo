@@ -89,6 +89,10 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-bootstrap-views (1.1.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.4)
@@ -98,6 +102,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
+    jwt (2.3.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -114,11 +119,14 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     mysql2 (0.5.3)
+    nexmo-jwt (0.1.2)
+      jwt (~> 2)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    phonelib (0.6.54)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -183,6 +191,7 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    sorbet-runtime (0.5.9426)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -202,6 +211,12 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    vonage (7.4.0)
+      nexmo-jwt (~> 0.1.2)
+      phonelib
+      rexml
+      sorbet-runtime (~> 0.5)
+      zeitwerk (~> 2, >= 2.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -234,6 +249,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   devise-bootstrap-views
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
@@ -246,6 +262,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
+  vonage
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
